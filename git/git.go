@@ -15,7 +15,7 @@ func GetUserEmail() (string, error) {
 	cmd := exec.Command("git", "config", "--global", "user.email")
 	output, err := cmd.Output()
 	if err != nil {
-		return "", err
+		return "", err	
 	}
 	return string(output), nil
 }
